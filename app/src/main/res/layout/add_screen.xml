@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageBg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_search"
+        app:layout_constraintBottom_toTopOf="@id/timeTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/nameTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:gravity="top"
+        android:hint="Enter name title"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/imageBg"
+        app:layout_constraintLeft_toLeftOf="@id/imageBg"
+        app:layout_constraintRight_toRightOf="@id/imageBg"
+        app:layout_constraintTop_toTopOf="@id/imageBg" />
+
+    <TextView
+        android:id="@+id/timeTitle"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:textColor="@color/black"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_search"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:hint="Choose time..."
+        android:textSize="23sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/dateTitle"
+        app:layout_constraintTop_toBottomOf="@id/nameTitle" />
+
+    <TextView
+        android:id="@+id/dateTitle"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="15dp"
+        android:textColor="@color/black"
+        android:background="@drawable/bg_search"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:hint="Choose date..."
+        android:textSize="23sp"
+        app:layout_constraintLeft_toRightOf="@id/timeTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTitle" />
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_search"
+        app:layout_constraintBottom_toTopOf="@id/cancel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTitle" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:gravity="top"
+        android:textColor="@color/black"
+        android:hint="Enter name title"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/cancel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTitle" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancel"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/add_btn"
+        android:text="CANCEL"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/add_btn"
+        android:text="ADD"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cancel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

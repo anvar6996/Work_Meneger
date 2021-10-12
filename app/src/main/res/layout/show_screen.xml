@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageBg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_search"
+        app:layout_constraintBottom_toTopOf="@id/timeTitleShow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameTitleShow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:gravity="top"
+        android:hint="Enter name title"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@id/imageBg"
+        app:layout_constraintLeft_toLeftOf="@id/imageBg"
+        app:layout_constraintRight_toRightOf="@id/imageBg"
+        app:layout_constraintTop_toTopOf="@id/imageBg" />
+
+    <TextView
+        android:id="@+id/timeTitleShow"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_search"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/dateTitleShow"
+        app:layout_constraintTop_toBottomOf="@id/nameTitleShow" />
+
+    <TextView
+        android:id="@+id/dateTitleShow"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_search"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintLeft_toRightOf="@id/timeTitleShow"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTitleShow" />
+
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/back"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTitleShow" />
+
+    <TextView
+        android:id="@+id/titleShow"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:gravity="top"
+
+        android:hint=""
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@id/back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTitleShow" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:layout_margin="19dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/bg" />
+
+    <ImageView
+        android:id="@+id/copy"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_copy"
+        app:layout_constraintBottom_toBottomOf="@id/back"
+        app:layout_constraintLeft_toRightOf="@id/back"
+        app:layout_constraintRight_toLeftOf="@id/send"
+        app:layout_constraintTop_toTopOf="@id/back" />
+
+    <ImageView
+        android:id="@+id/send"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:layout_margin="16dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:src="@drawable/img"
+        app:layout_constraintBottom_toBottomOf="@id/copy"
+        app:layout_constraintRight_toRightOf="@id/bg"
+        app:layout_constraintTop_toTopOf="@id/copy" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trash"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="?android:selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/editLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:src="@drawable/edit" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="Edit"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toBottomOf="@id/edit"
+            app:layout_constraintLeft_toRightOf="@id/edit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/trasjLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editLine">
+
+        <ImageView
+            android:id="@+id/safeTr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16sp"
+            android:src="@drawable/ic_trash"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Delete"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toBottomOf="@id/safeTr"
+            app:layout_constraintLeft_toRightOf="@id/safeTr"
+            app:layout_constraintTop_toTopOf="@id/safeTr" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

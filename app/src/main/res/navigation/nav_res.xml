@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_res"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.newtztodo.ui.screen.MainScreen"
+        android:label="MainScreen"
+        tools:layout="@layout/main_screen">
+        <action
+            android:id="@+id/action_mainScreen_to_addScreen"
+            app:destination="@id/addScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_showScreen"
+            app:destination="@id/showScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_editScreen"
+            app:destination="@id/editScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/addScreen"
+        android:name="uz.gita.newtztodo.ui.screen.AddScreen"
+        android:label="AddScreen"
+        tools:layout="@layout/add_screen" />
+    <fragment
+        android:id="@+id/showScreen"
+        android:name="uz.gita.newtztodo.ui.screen.ShowScreen"
+        android:label="ShowScreen" >
+        <action
+            android:id="@+id/action_showScreen_to_editScreen"
+            app:destination="@id/editScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/editScreen"
+        android:name="uz.gita.newtztodo.ui.screen.EditScreen"
+        android:label="EditScreen" />
+</navigation>
